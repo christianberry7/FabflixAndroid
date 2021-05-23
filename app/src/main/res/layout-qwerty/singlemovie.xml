@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="500px"
+    android:background="@android:color/darker_gray">
+
+    <TextView
+        android:text=""
+        android:id="@+id/title2"
+        android:textSize="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"/>
+
+    <TextView
+        android:text=""
+        android:id="@+id/year2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"/>
+    <TextView
+        android:text=""
+        android:id="@+id/director2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/year2"
+        android:textColor="@android:color/black"/>
+
+    <TextView
+        android:text=""
+        android:id="@+id/stars2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/director2"
+        android:textColor="@android:color/black"/>
+
+    <TextView
+        android:text=""
+        android:id="@+id/genres2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/stars2"
+        android:textColor="@android:color/black"/>
+
+
+</LinearLayout>
