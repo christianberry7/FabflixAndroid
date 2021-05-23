@@ -12,8 +12,15 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.StringRequest;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
+import javax.sql.DataSource;
+
+
 
 public class Login extends ActionBarActivity {
 
@@ -22,13 +29,14 @@ public class Login extends ActionBarActivity {
     private TextView message;
     private Button loginButton;
 
+
     /*
       In Android, localhost is the address of the device or the emulator.
       To connect to your machine, you need to use the below IP address
      */
     private final String host = "10.0.2.2";
     private final String port = "8080";
-    private final String domain = "cs122b-spring21-project2-login-cart-example";
+    private final String domain = "fabflix";
     private final String baseURL = "http://" + host + ":" + port + "/" + domain;
 
 
@@ -58,11 +66,17 @@ public class Login extends ActionBarActivity {
                 response -> {
                     // TODO: should parse the json response to redirect to appropriate functions
                     //  upon different response value.
-                    Log.d("login.success", response);
-                    // initialize the activity(page)/destination
-                    Intent listPage = new Intent(Login.this, ListViewActivity.class);
-                    // activate the list page.
-                    startActivity(listPage);
+                    if(response.contains("success")){
+                        Log.d("login.success", response);
+//                        // initialize the activity(page)/destination
+                        Intent listPage = new Intent(Login.this, SearchActivity.class);
+//                        // activate the list page.
+                        startActivity(listPage);
+                    }
+                    else{
+                        Log.d("login.failure", response);
+                        message.setText("Incorrect Username/Password");
+                    }
                 },
                 error -> {
                     // error

@@ -7,9 +7,42 @@
                 android:paddingRight="@dimen/activity_horizontal_margin"
                 android:paddingTop="@dimen/activity_vertical_margin">
 
+    <Button
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back to Search" />
+
     <ListView
-            android:id="@+id/list"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+        android:id="@+id/list"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="43dp"
+        android:layout_height="593dp" />
+
+    <Button
+        android:id="@+id/prev"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/list"
+        android:layout_marginLeft="70dp"
+        android:text="Previous" />
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/list"
+        android:layout_toRightOf="@id/prev"
+        android:layout_marginLeft="40dp"
+        android:text="Next" />
+
+    <TextView
+        android:text=""
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pageNum"
+        android:layout_below="@+id/prev"
+        android:layout_centerHorizontal = "true"
+        android:textSize = "25dp"/>
 
 </RelativeLayout>
