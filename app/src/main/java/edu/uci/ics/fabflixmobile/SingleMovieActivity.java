@@ -24,10 +24,10 @@ import java.util.Map;
 
 
 public class SingleMovieActivity extends Activity{
-    private final String host = "10.0.2.2";
-    private final String port = "8080";
+    private final String host = "3.14.84.121";
+    private final String port = "8443";
     private final String domain = "fabflix";
-    private final String baseURL = "http://" + host + ":" + port + "/" + domain;
+    private final String baseURL = "https://" + host + ":" + port + "/" + domain;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
