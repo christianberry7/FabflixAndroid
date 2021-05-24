@@ -29,6 +29,7 @@ public class ListViewActivity extends Activity {
     private final String domain = "fabflix";
     private final String baseURL = "https://" + host + ":" + port + "/" + domain;
 
+
     private String page;
     private String total_pages;
     public static final String JSON_DATA = "";
