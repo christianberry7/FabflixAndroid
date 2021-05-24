@@ -20,11 +20,11 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".ListViewActivity"></activity>
+        <activity android:name=".ListViewActivity" android:launchMode="singleTask"></activity>
         <!--By default Android supports only HTTPS connection. To enable HTTP, the below line is needed-->
         <uses-library android:name="org.apache.http.legacy" android:required="false"/>
-        <activity android:name=".SearchActivity"></activity>
-        <activity android:name=".SingleMovieActivity"></activity>
+        <activity android:name=".SearchActivity" android:launchMode="singleTask"></activity>
+        <activity android:name=".SingleMovieActivity" android:launchMode="singleTask"></activity>
 
         <!--By default Android supports only HTTPS connection. To enable HTTP, the below line is needed-->
         <uses-library android:name="org.apache.http.legacy" android:required="false"/>

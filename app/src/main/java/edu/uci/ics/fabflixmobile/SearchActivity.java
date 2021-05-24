@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.KeyEvent;
+import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -43,6 +45,16 @@ public class SearchActivity extends Activity {
         searchButton = findViewById(R.id.searchButton);
         searchButton.setOnClickListener(view -> searchMovie());
         // TODO: this should be retrieved from the backend server
+
+        searchButton.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if((event != null && (event.getKeyCode() == KeyEvent.KEYCODE_ENTER)) || (actionId == EditorInfo.IME_ACTION_DONE)) {
+                    searchButton.performClick();
+                }
+                return false;
+            }
+        });
 //        final ArrayList<Movie> movies = new ArrayList<>();
 //        movies.add(new Movie("The Terminal", (short) 2004));
 //        movies.add(new Movie("The Final Season", (short) 2007));
