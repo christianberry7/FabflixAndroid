@@ -20,7 +20,7 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".ListViewActivity" android:launchMode="singleTask"></activity>
+        <activity android:name=".ListViewActivity"></activity>
         <activity android:name=".SearchActivity" android:launchMode="singleTask"></activity>
         <activity android:name=".SingleMovieActivity" android:launchMode="singleTask"></activity>
 
