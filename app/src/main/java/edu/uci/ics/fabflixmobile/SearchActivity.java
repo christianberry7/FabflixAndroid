@@ -29,7 +29,7 @@ public class SearchActivity extends Activity {
     public static final String QUERY = "";
 
 
-    private final String host = "3.14.84.121";
+    private final String host = "18.222.142.175";
     private final String port = "8443";
     private final String domain = "fabflix";
     private final String baseURL = "https://" + host + ":" + port + "/" + domain;
