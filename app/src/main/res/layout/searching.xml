@@ -18,6 +18,9 @@
     <EditText
         android:layout_width = "wrap_content"
         android:layout_height = "wrap_content"
+        android:imeOptions="actionDone"
+        android:inputType="text"
+        android:maxLines="1"
         android:id = "@+id/searchBar"
         android:hint = "Movie Title"
         android:focusable = "true"
@@ -31,7 +34,6 @@
 
     <Button
         android:id="@+id/searchButton"
-        android:imeOptions="actionDone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/searchBar"

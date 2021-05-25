@@ -42,9 +42,9 @@ public class SearchActivity extends Activity {
         message = findViewById(R.id.message);
         searchButton = findViewById(R.id.searchButton);
         searchButton.setOnClickListener(view -> searchMovie());
-        // TODO: this should be retrieved from the backend server
+        //EditText edit_txt = (EditText) findViewById(R.id.searchBar);
 
-        searchButton.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+        title.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
                 if((event != null && (event.getKeyCode() == KeyEvent.KEYCODE_ENTER)) || (actionId == EditorInfo.IME_ACTION_DONE)) {
@@ -53,20 +53,6 @@ public class SearchActivity extends Activity {
                 return false;
             }
         });
-//        final ArrayList<Movie> movies = new ArrayList<>();
-//        movies.add(new Movie("The Terminal", (short) 2004));
-//        movies.add(new Movie("The Final Season", (short) 2007));
-//
-//        MovieListViewAdapter adapter = new MovieListViewAdapter(movies, this);
-//
-//        ListView listView = findViewById(R.id.list);
-//        listView.setAdapter(adapter);
-//
-//        listView.setOnItemClickListener((parent, view, position, id) -> {
-//            Movie movie = movies.get(position);
-//            String message = String.format("Clicked on position: %d, name: %s, %d", position, movie.getName(), movie.getYear());
-//            Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
-//        });
     }
 
     public void searchMovie() {

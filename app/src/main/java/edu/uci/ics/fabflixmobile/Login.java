@@ -54,7 +54,7 @@ public class Login extends ActionBarActivity {
 
         //assign a listener to call a function to handle the user request when clicking a button
         loginButton.setOnClickListener(view -> login());
-        loginButton.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+        password.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
                 if((event != null && (event.getKeyCode() == KeyEvent.KEYCODE_ENTER)) || (actionId == EditorInfo.IME_ACTION_DONE)) {
